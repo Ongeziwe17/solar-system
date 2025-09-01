@@ -109,7 +109,7 @@ jobs:
       with:
         context: .
         push: false
-        tags: ongeziwe17/solar-system:${{ github.sha }}
+        tags: ongeziwe17/solar-system-app:${{ github.sha }}
 
     - name: List Docker Images (Debug)
       run: docker images
