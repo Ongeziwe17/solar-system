@@ -108,7 +108,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        push: false
+        push: true
         tags: ${{ vars.DOCKER_USERNAME }}/solar-system-app:${{ github.sha }}
 
     - name: List Docker Images (Debug)
