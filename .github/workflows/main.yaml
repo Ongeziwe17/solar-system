@@ -58,7 +58,6 @@ jobs:
 
   code-coverage:
     name: Code Coverage
-    needs: unit-testing
     strategy:
       matrix:
         nodejs_version: [19, 20]
@@ -182,3 +181,9 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBECONFIG }}
+
+      - name: Fetch Minikube Cluster Details
+        run: |
+          kubectl version --short
+          echo "-----------------------------------"
+          kubectl get all
